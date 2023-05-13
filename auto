@@ -1,0 +1,29 @@
+#Python
+import pyautogui
+from time import sleep
+ 
+pyautogui.click(674,440,duration=1.5)
+pyautogui.click(693,386,duration=1)
+pyautogui.write('luis')
+pyautogui.click(692,412,duration=1)
+pyautogui.write('123456')
+pyautogui.click(597,439,duration=1)
+pyautogui.click(693,386,duration=1)
+pyautogui.write('luis')
+pyautogui.click(692,412,duration=1)
+pyautogui.write('123456')
+pyautogui.click(597,439,duration=1)
+
+with open('produtos.txt', 'r') as arquivo:
+    for linha in arquivo:
+        produto = linha.split(',')[0]
+        quantidade = linha.split(',')[1]
+        preco = linha.split(',')[2]
+        pyautogui.click(409,371,duration=0.5)
+        pyautogui.write(produto)
+        pyautogui.click(401,396,duration=0.5)
+        pyautogui.write(quantidade)
+        pyautogui.click(400,422,duration=0.5)
+        pyautogui.write(preco)
+        pyautogui.click(315,583,duration=0.5)
+        sleep(0.5)
